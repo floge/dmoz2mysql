@@ -1,35 +1,35 @@
-<?php 
+<?php
 /****h* Introduction/create_tables.php
  * NAME
- *		create_tables.php
+ *        create_tables.php
  * USAGE
- *		Just call this script to create the needed tables in your database		 
+ *        Just call this script to create the needed tables in your database
  * AUTHOR
- *		Amir Salihefendic (amix@amix.dk) -
- * 		Every hour, because it's all good.
+ *        Amir Salihefendic (amix@amix.dk) -
+ *        Every hour, because it's all good.
  * COPYRIGHT
- *		JFL Webcom (http://www.webcom.dk)
+ *        JFL Webcom (http://www.webcom.dk)
  * CREATION DATE
- *		23 nov. 2003
+ *        23 nov. 2003
  * HISTORY
- *		6 dec.  2003: Fixed some things. Added more complex regex's.
- *		12 feb. 2004: Fixed some "" things - changed them to ''
- *		19 maj  2004: Rewritten all comments, so they support ROBODOC - kinky stuff :-D
+ *        6 dec.  2003: Fixed some things. Added more complex regex's.
+ *        12 feb. 2004: Fixed some "" things - changed them to ''
+ *        19 maj  2004: Rewritten all comments, so they support ROBODOC - kinky stuff :-D
  ****/
 
 /****** create_tables.php/Include_stuff
  * FUNCTION
- *		Include classes and the config file.
+ *        Include classes and the config file.
  ****/
 include('config.php');
 require('class_command.php');
 
 Database::connect(); //Connect to the database
- 
+
 
 /****** create_tables.php/Create_tables_in_db
  * FUNCTION
- *		Creates the tables in our database.
+ *        Creates the tables in our database.
  ****/
 
 //Create content_description table
@@ -76,4 +76,3 @@ Database::sqlWithoutAnswer($query); //Create :)
 Basic::printToConsole("\nTables in the database (" . DB_DATABASE . ") are successfully created!\n");
 
 Database::close(); //Close connection
-?>
